@@ -1,0 +1,425 @@
+html, body {
+    height: 100%;
+    margin: 3px;
+    padding: 0;
+    gap: 50px;
+}
+
+.pagina-completa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Cabecera */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #ff0000;
+    padding: 10px 30px;
+}
+
+.nombre {
+    position: absolute;
+    left: 30px;
+}
+
+.cabecera {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+.cabecera a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.parte_derecha {
+    position: absolute;
+    right: 30px;
+}
+
+.idioma {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Parte principal de la página */
+.contenedor-principal {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contenedor-izquierda {
+    width: 66.66%;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #4caf50;
+    gap: 5px; /* espacio entre arriba y abajo */
+    margin-left: 10px;
+}
+
+.contenedor-arriba,
+.contenedor-abajo {
+    flex: 1; /* los dos iguales */
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contenedor-arriba {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    border: 3px solid #2196f3;
+    height: 100%;
+}
+
+
+.contenedor-abajo {
+    border: 3px solid #e91e63;
+}
+
+.contenedor-derecha {
+    width: 33.33%;
+    background: #d5eaff;
+    padding: 20px;
+    border: 3px solid #9c27b0;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Formulario de acceso */
+.formulario-acceso {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.formulario-acceso input[type="text"],
+.formulario-acceso input[type="password"] {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    text-align: center;
+}
+
+.recordar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+
+.formulario-acceso button {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.boton-registro {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: #2196f3;
+    color: #fff;
+    cursor: pointer;
+}
+
+.top-destinos h4 {
+    margin-bottom: 8px;
+    font-size: 20px; /* Más grande */
+}
+
+.top-destinos ul {
+    padding-left: 30px; /* Más indentación/tabulación */
+    margin: 0;
+}
+
+.top-destinos h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.top-destinos a {
+    color: #333;
+    text-decoration: none;
+    font-size: 17px; /* Más grande */
+}
+
+.top-destinos a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.consejos-rapidos {
+    margin-bottom: 10px;
+}
+
+.consejos-rapidos h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.consejos-rapidos ul {
+    padding-left: 30px;
+    margin: 0;
+}
+
+.consejos-rapidos li {
+    margin-bottom: 4px;
+}
+
+.consejos-rapidos a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.proximos-encuentros {
+    margin-bottom: 10px;
+}
+
+.proximos-encuentros h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.proximos-encuentros ul {
+    padding-left: 30px;
+    margin: 0;
+}
+
+.proximos-encuentros li {
+    margin-bottom: 4px;
+}
+
+.proximos-encuentros a {
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* Contenedor izquierda */ 
+.banner-portada {
+    flex: 0 0 auto;
+    min-height: 120px; /* un poco más alta que 60px/100px para que entre el texto */
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* evita que nada sobresalga */
+}
+
+
+.valor-proposicion {
+    background: rgba(0,0,0,0.7);
+    padding: 10px 15px; /* menos relleno para no salirse */
+    border-radius: 8px;
+    text-align: center;
+    max-width: 90%; /* evita que se estire demasiado */
+}
+
+.pack-sudeste {
+    flex: 1 1 auto; /* Ocupa todo el espacio disponible debajo del banner */
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 15px;
+    margin-top: 10px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pack-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+}
+
+.pack-titulo {
+    font-weight: bold;
+    font-size: 18px;
+    color: #2196f3;
+    margin-left: 10px;
+}
+
+.pack-precio {
+    font-weight: bold;
+    font-size: 18px;
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+.pack-frase {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+    color: #333;
+}
+
+.pack-comprar {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+
+.pack-comprar button {
+    padding: 6px 14px;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    background: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+.galeria-experiencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 100%;
+    align-items: stretch;
+}
+
+.tarjeta-experiencia {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.imagen-experiencia {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.titulo-experiencia {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ver-mas {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: none;
+    background: #2196f3;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.icono-like {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    font-size: 20px;
+    color: #e91e63;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pie de página */ 
+.pie-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    color: #fff;
+    padding: 20px 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pie-pagina .copyright {
+    font-size: 16px;
+}
+
+.pie-pagina .enlaces-footer a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.pie-pagina .redes-sociales a {
+    margin-right: 10px;
+}
+
+.pie-pagina .newsletter input[type="email"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 5px;
+}
+
+.pie-pagina .newsletter button {
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: #ff9800;
+    color: #fff;
+    cursor: pointer;
+}
