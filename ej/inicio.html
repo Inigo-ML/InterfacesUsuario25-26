@@ -1,154 +1,519 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mochileros Sin Frontera</title>
-    <link rel="stylesheet" href="style/inicio.css">
-</head>
-<body>
-    <div class="pagina-completa">
-        <header>
-            <div class="nombre">
-                Mochileros Sin Fronteras
-            </div>
-            <div class="cabecera">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Experiencias</a></li>
-                <li><a href="#">Consejos</a></li>
-                <li><a href="#">Foro</a></li>
-                <li><a href="#">Contacto</a></li>
-            </div>
-            <div class="parte_derecha">
-                <select class="idioma">
-                    <option value="es">ES</option>
-                    <option value="en">EN</option>
-                    <option value="fr">FR</option>
-                </select>
-            </div>
-        </header>
-        <div class="contenedor-principal">
-            <div class="contenedor-izquierda">
-                <div class="contenedor-arriba">
-                        <div class="banner-portada">
-                            <div class="valor-proposicion">
-                                <h2>Comparte y descubre viajes mochileros de larga distancia</h2>
-                            </div>
-                        </div>
-                        <div class="pack-sudeste">
-                            <div class="pack-header">
-                                <span class="pack-titulo">Pack Sudeste Asiático</span>
-                                <span class="pack-precio">600€</span>
-                            </div>
-                            <div class="pack-frase">
-                                Descubre la magia de Vietnam: cultura, naturaleza y aventura.
-                            </div>
-                            <div class="pack-comprar">
-                                <button>Comprar</button>
-                            </div>
-                        </div>
-                </div>
-                <div class="contenedor-abajo">
-                    <div class="galeria-experiencias">
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1465101178521-c1a4c8a0f8f5?auto=format&fit=crop&w=400&q=80" alt="Montaña" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Ruta por los Andes</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Playa" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Surf en Bali</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Selva" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Aventura en Amazonas</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Desierto" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Desierto de Marruecos</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Ciudad" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Explora Tokio</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                        <div class="tarjeta-experiencia">
-                            <img src="https://images.unsplash.com/photo-1465101178521-c1a4c8a0f8f5?auto=format&fit=crop&w=400&q=80" alt="Bosque" class="imagen-experiencia">
-                            <div class="titulo-experiencia">Senderismo en Canadá</div>
-                            <button class="ver-mas">Ver más</button>
-                            <span class="icono-like">&#10084;</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="contenedor-derecha">
-                    <form class="formulario-acceso">
-                        <h3>Formulario de acceso</h3>
-                        <input type="text" placeholder="Usuario" required>
-                        <input type="password" placeholder="Contraseña" required>
-                        <div class="recordar">
-                            <input type="checkbox" id="recordar">
-                            <label for="recordar">Recordar credenciales</label>
-                        </div>
-                        <button type="submit">Iniciar sesión</button>
-                        <button type="submit" >Registrarse</button>
-                    </form>
-                    <div class="top-destinos">
-                        <h4>Top destinos mochileros</h4>
-                        <ul>
-                            <li><a href="#">Tailandia</a></li>
-                            <li><a href="#">Perú</a></li>
-                            <li><a href="#">Nueva Zelanda</a></li>
-                            <li><a href="#">Vietnam</a></li>
-                            <li><a href="#">Portugal</a></li>
-                        </ul>
-                    </div>
-                    <div class="consejos-rapidos">
-                        <h4>Consejos rápidos</h4>
-                        <ul>
-                            <li><a href="#">Lleva seguro médico</a></li>
-                            <li><a href="#">Infórmate sobre visados con antelación</a></li>
-                            <li><a href="#">Viaja ligero</a></li>
-                            <li><a href="#">Aprende frases básicas</a></li>
-                        </ul>
-                    </div>
-                    <div class="proximos-encuentros">
-                        <h4>Próximos encuentros</h4>
-                        <ul>
-                            <li><a href="#">Encuentro Madrid - 20/10/2025</a></li>
-                            <li><a href="#">Encuentro Buenos Aires - 05/11/2025</a></li>
-                            <li><a href="#">Encuentro Bangkok - 15/12/2025</a></li>
-                        </ul>
-                    </div>
-            </div>
-        </div>
-        <footer class="pie-pagina">
-            <div class="copyright">
-                &copy; 2025 Mochileros Sin Fronteras
-            </div>
-            <div class="enlaces-footer">
-                <a href="#">Sobre nosotros</a>
-                <a href="#">Política de privacidad</a>
-                <a href="#">Ayuda</a>
-            </div>
-            <div class="redes-sociales">
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="24" height="24"></a>
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" width="24" height="24"></a>
-                <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24" height="24"></a>
-            </div>
-            <form class="newsletter">
-                <input type="email" placeholder="Tu email" required>
-                <button type="submit">Suscribirse</button>
-            </form>
-        </footer>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mochileros sin Fronteras</title>
+    <link rel="stylesheet" href="style/inicio.css" />
+  </head>
+  <body>
+    <header>
+      <div class="nombre">Mochileros Sin Fronteras</div>
+
+      <!-- Menú hamburguesa para móvil -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Menú de navegación desktop -->
+      <div class="cabecera">
+        <a href="#">Inicio</a>
+        <a href="#">Experiencias</a>
+        <a href="#">Consejos</a>
+        <a href="#">Foro</a>
+        <a href="#">Contacto</a>
+      </div>
+
+      <div class="parte-derecha">
+        <img
+          src="/images/logo.png"
+          alt="Logo Mochileros Sin Fronteras"
+          class="logo"
+        />
+        <select class="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menú</span>
+        <button class="menu-close" id="menuClose" aria-label="Cerrar menú">
+          <span class="close-line"></span>
+          <span class="close-line"></span>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav">
+        <a href="#" class="mobile-menu-link">Inicio</a>
+        <a href="#" class="mobile-menu-link">Experiencias</a>
+        <a href="#" class="mobile-menu-link">Consejos</a>
+        <a href="#" class="mobile-menu-link">Foro</a>
+        <a href="#" class="mobile-menu-link">Contacto</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <select class="idioma-mobile">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
     </div>
-</body>
+
+    <!-- Overlay para el menú móvil -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="contenedor-principal">
+      <div class="contenedor-izquierda">
+        <div class="contenedor-arriba">
+          <div class="banner-portada">
+            <div class="valor-proposicion">
+              <h1>Comparte y descubre viajes mochileros de larga distancia</h1>
+            </div>
+          </div>
+          <div class="pack-sudeste">
+            <div class="pack-titulo">
+              <div class="pack-sudeste-fila">
+                <h2>Pack Sudeste Asiático</h2>
+                <span class="pack-precio">600€</span>
+              </div>
+              <h4>
+                Descubre la magia de Vietnam: cultura, naturaleza y aventura.
+              </h4>
+            </div>
+            <button>Comprar</button>
+          </div>
+        </div>
+        <div class="contenedor-abajo">
+          <h3>Experiencias de la comunidad mochilera</h3>
+          <div class="galeria-experiencias">
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1592519755457-1082165effb0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Ruta por los Andes</h5>
+                <p class="tarjeta-texto">
+                  Recorre los majestuosos paisajes andinos y vive la aventura
+                  entre montañas y pueblos tradicionales.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1455264745730-cb3b76250ae8?q=80&w=2233&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Surf en Bali</h5>
+                <p class="tarjeta-texto">
+                  Disfruta de las olas perfectas y la cultura balinesa en un
+                  paraíso tropical lleno de energía y color.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1591081658714-f576fb7ea3ed?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Aventura en Amazonas</h5>
+                <p class="tarjeta-texto">
+                  Explora la selva amazónica, descubre su biodiversidad y
+                  conecta con comunidades locales únicas.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Desierto de Marruecos</h5>
+                <p class="tarjeta-texto">
+                  Vive la magia del Sahara, sus dunas doradas y la hospitalidad
+                  de los pueblos bereberes.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2684&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Explora Tokio</h5>
+                <p class="tarjeta-texto">
+                  Sumérgete en la vibrante vida urbana de Tokio, entre
+                  tecnología, tradición y gastronomía única.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2611&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Senderismo en Canadá</h5>
+                <p class="tarjeta-texto">
+                  Descubre los bosques canadienses, lagos cristalinos y rutas de
+                  senderismo rodeadas de naturaleza salvaje.
+                </p>
+                <a href="/registro" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-derecha">
+        <form class="formulario-acceso">
+          <h3>Formulario de acceso</h3>
+          <input type="text" placeholder="Usuario" required />
+          <input type="password" placeholder="Contraseña" required />
+          <div class="recordar">
+            <input type="checkbox" id="recordar" />
+            <label for="recordar">Recordar credenciales</label>
+          </div>
+          <div class="botones">
+            <button type="submit">Iniciar sesión</button>
+            <button type="submit">Registrarse</button>
+          </div>
+        </form>
+        <div class="top-destinos">
+          <h4>Top destinos mochileros</h4>
+          <ul>
+            <li><a href="#">Tailandia</a></li>
+            <li><a href="#">Perú</a></li>
+            <li><a href="#">Nueva Zelanda</a></li>
+            <li><a href="#">Vietnam</a></li>
+            <li><a href="#">Portugal</a></li>
+          </ul>
+        </div>
+        <div class="consejos-rapidos">
+          <h4>Consejos rápidos</h4>
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Lleva seguro médico</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Infórmate sobre visados con antelación</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Viaja ligero</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Aprende frases básicas</a>
+            </li>
+          </ul>
+        </div>
+        <div class="proximos-encuentros">
+          <h4>Próximos encuentros</h4>
+          <ul>
+            <li><a href="#">Encuentro Madrid - 20/10/2025</a></li>
+            <li><a href="#">Encuentro Buenos Aires - 05/11/2025</a></li>
+            <li><a href="#">Encuentro Bangkok - 15/12/2025</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="pie-pagina">
+      <div class="copyright">&copy; 2025 Mochileros Sin Fronteras</div>
+      <div class="enlaces-footer">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+      <div class="footer-derecha">
+        <div class="redes-sociales">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#ffffff"
+                d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+              />
+            </svg>
+          </a>
+        </div>
+        <form class="newsletter">
+          <input type="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </footer>
+
+    <script>
+      // JavaScript para el menú móvil
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const menuClose = document.getElementById("menuClose");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+        const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+        // Función para abrir el menú
+        function openMenu() {
+          mobileMenu.classList.add("active");
+          mobileMenuOverlay.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevenir scroll del body
+        }
+
+        // Función para cerrar el menú
+        function closeMenu() {
+          mobileMenu.classList.remove("active");
+          mobileMenuOverlay.classList.remove("active");
+          document.body.style.overflow = ""; // Restaurar scroll del body
+        }
+
+        // Event listeners
+        menuToggle.addEventListener("click", openMenu);
+        menuClose.addEventListener("click", closeMenu);
+        mobileMenuOverlay.addEventListener("click", closeMenu);
+
+        // Cerrar menú al hacer clic en un enlace
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        // Cerrar menú con tecla Escape
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
+            closeMenu();
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
