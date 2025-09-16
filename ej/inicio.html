@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mochileros sin Fronteras</title>
     <link rel="stylesheet" href="style/inicio.css" />
+    <title>Mochileros sin Fronteras</title>
   </head>
   <body>
     <header>
-      <div class="nombre">Mochileros Sin Fronteras</div>
+      <a href="/inicio.html" class="nombre">Mochileros Sin Fronteras</a>
 
       <!-- Menú hamburguesa para móvil -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -67,6 +67,8 @@
 
     <!-- Overlay para el menú móvil -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Contenedor principal -->
     <div class="contenedor-principal">
       <div class="contenedor-izquierda">
         <div class="contenedor-arriba">
@@ -85,7 +87,7 @@
                 Descubre la magia de Vietnam: cultura, naturaleza y aventura.
               </h4>
             </div>
-            <button>Comprar</button>
+            <a href="/compra.html" class="boton-compra">Comprar</a>
           </div>
         </div>
         <div class="contenedor-abajo">
@@ -103,7 +105,7 @@
                   Recorre los majestuosos paisajes andinos y vive la aventura
                   entre montañas y pueblos tradicionales.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -120,7 +122,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
 
@@ -136,7 +138,7 @@
                   Disfruta de las olas perfectas y la cultura balinesa en un
                   paraíso tropical lleno de energía y color.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -153,7 +155,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
 
@@ -169,7 +171,7 @@
                   Explora la selva amazónica, descubre su biodiversidad y
                   conecta con comunidades locales únicas.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -186,7 +188,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
 
@@ -202,7 +204,7 @@
                   Vive la magia del Sahara, sus dunas doradas y la hospitalidad
                   de los pueblos bereberes.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -219,7 +221,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
 
@@ -235,7 +237,7 @@
                   Sumérgete en la vibrante vida urbana de Tokio, entre
                   tecnología, tradición y gastronomía única.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -252,7 +254,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
 
@@ -268,7 +270,7 @@
                   Descubre los bosques canadienses, lagos cristalinos y rutas de
                   senderismo rodeadas de naturaleza salvaje.
                 </p>
-                <a href="/registro" class="tarjeta-boton">
+                <a href="/registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -285,7 +287,7 @@
                     />
                   </svg>
                 </a>
-                <a href="/registro" class="icono-like">&#10084;</a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
               </div>
             </div>
           </div>
@@ -300,19 +302,33 @@
             <input type="checkbox" id="recordar" />
             <label for="recordar">Recordar credenciales</label>
           </div>
-          <div class="botones">
+          <div>
             <button type="submit">Iniciar sesión</button>
-            <button type="submit">Registrarse</button>
+            <a href="/registro.html">Registro</a>
           </div>
         </form>
         <div class="top-destinos">
           <h4>Top destinos mochileros</h4>
           <ul>
-            <li><a href="#">Tailandia</a></li>
-            <li><a href="#">Perú</a></li>
-            <li><a href="#">Nueva Zelanda</a></li>
-            <li><a href="#">Vietnam</a></li>
-            <li><a href="#">Portugal</a></li>
+            <li>
+              <img src="images/tailandia.png" alt="Bandera de Tailandia" />
+              <a href="#">Tailandia</a>
+            </li>
+            <li>
+              <img src="images/peru.png" alt="Bandera de Perú" />
+              <a href="#">Perú</a>
+            </li>
+            <li>
+              <img
+                src="images/nueva-zelanda.png"
+                alt="Bandera de Nueva Zelanda"
+              />
+              <a href="#">Nueva Zelanda</a>
+            </li>
+            <li>
+              <img src="images/vietnam.png" alt="Bandera de Vietnam" />
+              <a href="#">Vietnam</a>
+            </li>
           </ul>
         </div>
         <div class="consejos-rapidos">
@@ -411,9 +427,9 @@
         <div class="proximos-encuentros">
           <h4>Próximos encuentros</h4>
           <ul>
-            <li><a href="#">Encuentro Madrid - 20/10/2025</a></li>
-            <li><a href="#">Encuentro Buenos Aires - 05/11/2025</a></li>
-            <li><a href="#">Encuentro Bangkok - 15/12/2025</a></li>
+            <li><a href="#">Madrid - 20/10</a></li>
+            <li><a href="#">Barcelona - 05/11</a></li>
+            <li><a href="#">Valencia - 15/12</a></li>
           </ul>
         </div>
       </div>
