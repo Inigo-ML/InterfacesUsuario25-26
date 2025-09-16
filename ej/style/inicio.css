@@ -16,41 +16,57 @@ body {
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px;
+  justify-content: center;
+  position: relative;
   font-size: 16px;
+  gap: 50px;
   border-bottom: 1px solid #292929;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribuye los elementos */
+  position: relative;
+  font-size: 16px;
+  gap: 50px;
+  border-bottom: 1px solid #292929;
+  padding: 0 20px; /* Agrega espacio horizontal */
+}
+
 .nombre {
-  margin-left: 30px;
+  position: static; /* Elimina la posición absoluta */
   text-decoration: none;
   color: black;
+  font-size: 18px; /* Ajusta el tamaño si es necesario */
 }
 
 .cabecera {
   display: flex;
-  justify-content: center;
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center;
+  justify-content: center; /* Centra las opciones */
+  flex: 1; /* Permite que ocupe el espacio central */
 }
+
+.parte_derecha {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre elementos */
+}
+
 .cabecera a {
   text-decoration: none;
   color: #333;
+  font-size: 16px;
   font-weight: 500;
 }
 .cabecera a:hover {
   color: #2563eb;
 }
 
-.parte-derecha {
-  margin-right: 30px;
-  display: flex;
-  align-items: center;
-}
 
 .logo {
   height: 40px;
@@ -574,8 +590,8 @@ header {
   }
 
   .nombre {
-    margin-left: 0;
-    font-size: 16px;
+    position: absolute;
+    left: 30px;
   }
 
   .menu-toggle {

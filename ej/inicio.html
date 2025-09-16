@@ -8,16 +8,9 @@
   </head>
   <body>
     <header>
-      <a href="/inicio.html" class="nombre">Mochileros Sin Fronteras</a>
-
-      <!-- Menú hamburguesa para móvil -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-
-      <!-- Menú de navegación desktop -->
+      <div class="nombre">
+        Mochileros Sin Fronteras
+      </div>
       <div class="cabecera">
         <a href="#">Inicio</a>
         <a href="#">Experiencias</a>
@@ -28,7 +21,7 @@
 
       <div class="parte-derecha">
         <img
-          src="/images/logo.png"
+          src="images/logo.png"
           alt="Logo Mochileros Sin Fronteras"
           class="logo"
         />
@@ -39,35 +32,6 @@
         </select>
       </div>
     </header>
-
-    <!-- Menú móvil -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-header">
-        <span class="mobile-menu-title">Menú</span>
-        <button class="menu-close" id="menuClose" aria-label="Cerrar menú">
-          <span class="close-line"></span>
-          <span class="close-line"></span>
-        </button>
-      </div>
-      <nav class="mobile-menu-nav">
-        <a href="#" class="mobile-menu-link">Inicio</a>
-        <a href="#" class="mobile-menu-link">Experiencias</a>
-        <a href="#" class="mobile-menu-link">Consejos</a>
-        <a href="#" class="mobile-menu-link">Foro</a>
-        <a href="#" class="mobile-menu-link">Contacto</a>
-      </nav>
-      <div class="mobile-menu-footer">
-        <select class="idioma-mobile">
-          <option value="es">ES</option>
-          <option value="en">EN</option>
-          <option value="fr">FR</option>
-        </select>
-      </div>
-    </div>
-
-    <!-- Overlay para el menú móvil -->
-    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
-
     <!-- Contenedor principal -->
     <div class="contenedor-principal">
       <div class="contenedor-izquierda">
@@ -97,7 +61,6 @@
               <img
                 class="tarjeta-img"
                 src="https://images.unsplash.com/photo-1592519755457-1082165effb0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Imagen de ejemplo"
               />
               <div class="tarjeta-contenido">
                 <h5 class="tarjeta-titulo">Ruta por los Andes</h5>
@@ -105,7 +68,7 @@
                   Recorre los majestuosos paisajes andinos y vive la aventura
                   entre montañas y pueblos tradicionales.
                 </p>
-                <a href="/registro.html" class="tarjeta-boton">
+                <a href="registro.html" class="tarjeta-boton">
                   Ver más
                   <svg
                     class="tarjeta-icono"
@@ -304,7 +267,7 @@
           </div>
           <div>
             <button type="submit">Iniciar sesión</button>
-            <a href="/registro.html">Registro</a>
+            <button type="submit">Registrarse</button>
           </div>
         </form>
         <div class="top-destinos">
@@ -489,47 +452,5 @@
         </form>
       </div>
     </footer>
-
-    <script>
-      // JavaScript para el menú móvil
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.getElementById("menuToggle");
-        const menuClose = document.getElementById("menuClose");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
-        const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
-
-        // Función para abrir el menú
-        function openMenu() {
-          mobileMenu.classList.add("active");
-          mobileMenuOverlay.classList.add("active");
-          document.body.style.overflow = "hidden"; // Prevenir scroll del body
-        }
-
-        // Función para cerrar el menú
-        function closeMenu() {
-          mobileMenu.classList.remove("active");
-          mobileMenuOverlay.classList.remove("active");
-          document.body.style.overflow = ""; // Restaurar scroll del body
-        }
-
-        // Event listeners
-        menuToggle.addEventListener("click", openMenu);
-        menuClose.addEventListener("click", closeMenu);
-        mobileMenuOverlay.addEventListener("click", closeMenu);
-
-        // Cerrar menú al hacer clic en un enlace
-        mobileMenuLinks.forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-
-        // Cerrar menú con tecla Escape
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape" && mobileMenu.classList.contains("active")) {
-            closeMenu();
-          }
-        });
-      });
-    </script>
   </body>
 </html>
