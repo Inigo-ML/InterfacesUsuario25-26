@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/inicio.css" />
+    <link rel="stylesheet" href="style/registrado.css" />
+    <title>Mochileros sin Fronteras</title>
+  </head>
+  <body>
+    <header>
+      <a href="/inicio.html" class="nombre">Mochileros Sin Fronteras</a>
+
+      <!-- Menú hamburguesa para móvil -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <!-- Menú de navegación desktop -->
+      <div class="cabecera">
+        <a href="#">Inicio</a>
+        <a href="#">Experiencias</a>
+        <a href="#">Consejos</a>
+        <a href="#">Foro</a>
+        <a href="#">Contacto</a>
+      </div>
+
+      <div class="parte-derecha">
+        <img
+          src="/images/logo.png"
+          alt="Logo Mochileros Sin Fronteras"
+          class="logo"
+        />
+        <select class="idioma">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- Menú móvil -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Menú</span>
+        <button class="menu-close" id="menuClose" aria-label="Cerrar menú">
+          <span class="close-line"></span>
+          <span class="close-line"></span>
+        </button>
+      </div>
+      <nav class="mobile-menu-nav">
+        <a href="#" class="mobile-menu-link">Inicio</a>
+        <a href="#" class="mobile-menu-link">Experiencias</a>
+        <a href="#" class="mobile-menu-link">Consejos</a>
+        <a href="#" class="mobile-menu-link">Foro</a>
+        <a href="#" class="mobile-menu-link">Contacto</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <select class="idioma-mobile">
+          <option value="es">ES</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Overlay para el menú móvil -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+      <div class="contenedor-izquierda">
+        <div class="contenedor-arriba">
+          <div class="banner-portada">
+            <div class="valor-proposicion">
+              <h1>Comparte y descubre viajes mochileros de larga distancia</h1>
+            </div>
+          </div>
+          <div class="pack-sudeste">
+            <div class="pack-titulo">
+              <div class="pack-sudeste-fila">
+                <h2>Pack Sudeste Asiático</h2>
+                <span class="pack-precio">600€</span>
+              </div>
+              <h4>
+                Descubre la magia de Vietnam: cultura, naturaleza y aventura.
+              </h4>
+            </div>
+            <a href="/compra.html" class="boton-compra">Comprar</a>
+          </div>
+        </div>
+        <div class="contenedor-abajo">
+          <h3>Experiencias de la comunidad mochilera</h3>
+          <div class="galeria-experiencias">
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1592519755457-1082165effb0?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Ruta por los Andes</h5>
+                <p class="tarjeta-texto">
+                  Recorre los majestuosos paisajes andinos y vive la aventura
+                  entre montañas y pueblos tradicionales.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1455264745730-cb3b76250ae8?q=80&w=2233&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Surf en Bali</h5>
+                <p class="tarjeta-texto">
+                  Disfruta de las olas perfectas y la cultura balinesa en un
+                  paraíso tropical lleno de energía y color.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1591081658714-f576fb7ea3ed?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Aventura en Amazonas</h5>
+                <p class="tarjeta-texto">
+                  Explora la selva amazónica, descubre su biodiversidad y
+                  conecta con comunidades locales únicas.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Desierto de Marruecos</h5>
+                <p class="tarjeta-texto">
+                  Vive la magia del Sahara, sus dunas doradas y la hospitalidad
+                  de los pueblos bereberes.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1551641506-ee5bf4cb45f1?q=80&w=2684&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Explora Tokio</h5>
+                <p class="tarjeta-texto">
+                  Sumérgete en la vibrante vida urbana de Tokio, entre
+                  tecnología, tradición y gastronomía única.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+
+            <div class="tarjeta-experiencia">
+              <img
+                class="tarjeta-img"
+                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?q=80&w=2611&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Imagen de ejemplo"
+              />
+              <div class="tarjeta-contenido">
+                <h5 class="tarjeta-titulo">Senderismo en Canadá</h5>
+                <p class="tarjeta-texto">
+                  Descubre los bosques canadienses, lagos cristalinos y rutas de
+                  senderismo rodeadas de naturaleza salvaje.
+                </p>
+                <a href="/registro.html" class="tarjeta-boton">
+                  Ver más
+                  <svg
+                    class="tarjeta-icono"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                </a>
+                <a href="/registro.html" class="icono-like">&#10084;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-derecha">
+        <div class="info-usuario">
+          <h4>Lucas del Villar</h4>
+          <div class="info-usuario-datos">
+            <img src="/images/perfil.png" alt="Foto de perfil del usuario" />
+            <button>Cerrar sesión</button>
+          </div>
+        </div>
+        <div class="busca-experiencias">
+          <h4>Busca experiencias</h4>
+          <div class="grid-experiencias">
+            <div>
+              <input type="checkbox" name="costa-rica" id="costa-rica" />
+              <label for="costa-rica">Costa Rica</label>
+            </div>
+            <div>
+              <input type="checkbox" name="brasil" id="brasil" />
+              <label for="brasil">Brasil</label>
+            </div>
+            <div>
+              <input type="checkbox" name="Kenia" id="Kenia" />
+              <label for="Kenia">Kenia</label>
+            </div>
+            <div>
+              <input type="checkbox" name="india" id="india" />
+              <label for="india">India</label>
+            </div>
+            <div>
+              <input type="checkbox" name="china" id="china" />
+              <label for="china">China</label>
+            </div>
+            <div>
+              <input type="checkbox" name="egipto" id="egipto" />
+              <label for="egipto">Egipto</label>
+            </div>
+          </div>
+          <div class="barra-busqueda">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M11.5 7a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0m-.82 4.74a6 6 0 1 1 1.06-1.06l2.79 2.79a.75.75 0 1 1-1.06 1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            <input type="text" placeholder="Buscar..." />
+          </div>
+        </div>
+        <div class="ultimos-consejos">
+          <h4>Últimos consejos</h4>
+          <ul>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Cómo ahorrar dinero en hoteles</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Mejores apps para organizar viajes</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Cómo evitar caer en trampas turísticas</a>
+            </li>
+            <li>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="m14.25 8.75c-.5 2.5-2.3849 4.85363-5.03069 5.37991-2.64578.5263-5.33066-.7044-6.65903-3.0523-1.32837-2.34784-1.00043-5.28307.81336-7.27989 1.81379-1.99683 4.87636-2.54771 7.37636-1.54771"
+                  ></path>
+                  <polyline points="5.75 7.75 8.25 10.25 14.25 3.75"></polyline>
+                </g>
+              </svg>
+              <a href="#">Cómo elegir los mejores restaurantes</a>
+            </li>
+          </ul>
+          <h5>¿Tienes algún consejo?</h5>
+          <form class="formulario-consejos">
+            <input type="text" placeholder="Título del consejo" required />
+            <textarea placeholder="Escribe aquí tu consejo" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+        <div class="calendario">
+          <div class="calendario-header">
+            <button class="nav-btn" id="prevMonth">&lt;</button>
+            <h4 id="monthYear">Septiembre 2025</h4>
+            <button class="nav-btn" id="nextMonth">&gt;</button>
+          </div>
+          <div class="calendario-dias">
+            <div class="dia-semana">Lu</div>
+            <div class="dia-semana">Ma</div>
+            <div class="dia-semana">Mi</div>
+            <div class="dia-semana">Ju</div>
+            <div class="dia-semana">Vi</div>
+            <div class="dia-semana">Sa</div>
+            <div class="dia-semana">Do</div>
+            <div class="dia">1</div>
+            <div class="dia">2</div>
+            <div class="dia">3</div>
+            <div class="dia">4</div>
+            <div class="dia">5</div>
+            <div class="dia">6</div>
+            <div class="dia">7</div>
+            <div class="dia">8</div>
+            <div class="dia">9</div>
+            <div class="dia">10</div>
+            <div class="dia">11</div>
+            <div class="dia">12</div>
+            <div class="dia">13</div>
+            <div class="dia">14</div>
+            <div class="dia">15</div>
+            <div class="dia">16</div>
+            <div class="dia">17</div>
+            <div class="dia hoy">18</div>
+            <div class="dia">19</div>
+            <div class="dia">20</div>
+            <div class="dia">21</div>
+            <div class="dia">22</div>
+            <div class="dia">23</div>
+            <div class="dia">24</div>
+            <div class="dia">25</div>
+            <div class="dia">26</div>
+            <div class="dia">27</div>
+            <div class="dia">28</div>
+            <div class="dia">29</div>
+            <div class="dia">30</div>
+            <div class="dia otro-mes">1</div>
+            <div class="dia otro-mes">2</div>
+            <div class="dia otro-mes">3</div>
+            <div class="dia otro-mes">4</div>
+            <div class="dia otro-mes">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="pie-pagina">
+      <div class="copyright">&copy; 2025 Mochileros Sin Fronteras</div>
+      <div class="enlaces-footer">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Ayuda</a>
+      </div>
+      <div class="footer-derecha">
+        <div class="redes-sociales">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#fff"
+                d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"
+              />
+            </svg>
+          </a>
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#ffffff"
+                d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"
+              />
+            </svg>
+          </a>
+        </div>
+        <form class="newsletter">
+          <input type="email" placeholder="Tu email" required />
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </footer>
+  </body>
+</html>
