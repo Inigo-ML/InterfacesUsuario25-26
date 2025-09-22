@@ -15,23 +15,14 @@ body {
 /* Cabecera */
 header {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;        /* centra verticalmente todo dentro del header */
+  justify-content: space-between; /* nombre a la izq, menú centrado, logo+idioma a la dcha */
   position: relative;
   font-size: 16px;
   gap: 50px;
   border-bottom: 1px solid #292929;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Distribuye los elementos */
-  position: relative;
-  font-size: 16px;
-  gap: 50px;
-  border-bottom: 1px solid #292929;
-  padding: 0 20px; /* Agrega espacio horizontal */
+  padding: 0 20px;
+  height: 80px;              /* <-- añade altura fija para el banner */
 }
 
 .nombre {
@@ -43,20 +34,19 @@ header {
 
 .cabecera {
   display: flex;
+  justify-content: center; /* centra las opciones */
   gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
-  justify-content: center; /* Centra las opciones */
-  flex: 1; /* Permite que ocupe el espacio central */
+  flex: 1; /* ocupa el espacio central */
 }
 
-.parte_derecha {
+.parte-derecha {
   display: flex;
-  align-items: center;
-  gap: 10px; /* Espacio entre elementos */
+  align-items: center;   /* centra verticalmente logo + selector */
+  gap: 10px;             /* espacio entre logo y selector */
 }
-
 .cabecera a {
   text-decoration: none;
   color: #333;
@@ -532,34 +522,44 @@ header {
 .pie-pagina {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* centramos todo por defecto */
   background: #333;
   color: #fff;
   padding: 20px 30px;
   gap: 20px;
   flex-wrap: wrap;
+  position: relative; /* importante para posicionar el centro */
 }
 
 .pie-pagina .copyright {
-  font-size: 16px;
+  margin-right: auto; /* queda a la izquierda */
 }
 
 .pie-pagina .enlaces-footer a {
   color: #fff;
-  margin-right: 15px;
   text-decoration: none;
   font-size: 16px;
+  margin-right: 0; /* quitamos márgenes */
 }
 
-.pie-pagina .footer-derecha {
+.pie-pagina .enlaces-footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* centra exactamente */
   display: flex;
-  align-items: center;
   gap: 20px;
 }
 
-.pie-pagina .redes-sociales a {
-  margin-right: 10px;
-  text-decoration: none;
+.pie-pagina .footer-derecha {
+  display: flex;           /* activa flexbox */
+  align-items: center;     /* centra verticalmente los elementos */
+  gap: 20px;               /* espacio entre redes sociales y el formulario */
+}
+
+
+.pie-pagina .redes-sociales {
+  display: flex;           /* asegura que los iconos estén en fila */
+  gap: 10px;               /* espacio entre iconos */
 }
 
 .pie-pagina .newsletter input[type="email"] {
