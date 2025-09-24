@@ -1,5 +1,3 @@
-/* cabecera*/
-
 * {
   margin: 0;
   padding: 0;
@@ -66,6 +64,7 @@ header {
   padding: 8px 4px;
 }
 
+
 /* Parte principal */
 
 .contenedor-principal {
@@ -76,68 +75,206 @@ header {
   gap: 5px;
 }
 
-.contenedor-registro {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
+.contenedor-izquierda {
+  width: 33.33%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
+  gap: 5px;
+  margin-left: 10px;
+}
+
+.contenedor-derecha {
+  width: 66.66%;
+  padding: 20px;
+  border-left: 1px solid #292929;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pack-sudeste {
+  height: 450px;
+  margin-top: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=3047&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  color: white;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.pack-sudeste::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  pointer-events: none;
+}
+.pack-sudeste > * {
+  position: relative;
+  z-index: 2;
 }
 
-.titulo-registro {
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.formulario-registro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-.formulario-registro label {
-  font-weight: 600;
-}
-.formulario-registro input {
+.pack-sudeste-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  height: 35px;
-  margin-top: 6px;
-  margin-bottom: 4px;
+}
+
+.pack-titulo h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.pack-titulo h4 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.pack-precio {
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.pack-sudeste .boton-compra {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  width: fit-content;
+  padding: 8px 32px;
+  font-size: 18px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+}
+.pack-sudeste .boton-compra:hover {
+  background: #1e40af;
+}
+
+.contenedor-arriba,
+.contenedor-abajo {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contenedor-arriba {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  height: 100%;
+}
+
+.contenedor-abajo h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.descripcion-pack {
+  background: #f9f9f9;              /* color de fondo suave */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%;                      /* para que ocupe el alto disponible */
+}
+
+.descripcion-pack h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.descripcion-pack p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  text-align: justify;
+}
+
+/* Formulario de compra */
+.formulario-compra {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.formulario-compra h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario-compra form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario-compra label {
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario-compra input,
+.formulario-compra select {
   padding: 8px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.formulario-registro input[type="file"] {
-  border: none;
-  padding: 8px 0;
-}
-.formulario-registro input[type="checkbox"] {
-  width: fit-content;
-}
-.formulario-registro .checkbox-privacidad {
+
+.botones-form {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  gap: 15px;
+  margin-top: 10px;
 }
-.formulario-registro button {
-  background-color: #2563eb;
-  color: white;
+
+.btn-comprar,
+.btn-borrar {
+  padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
-.formulario-registro button:hover {
+
+.btn-comprar {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn-comprar:hover {
   background-color: #1e40af;
 }
 
+.btn-borrar {
+  background-color: #e5e7eb;
+  color: #333;
+}
 
-/* pie de pagina */ 
+.btn-borrar:hover {
+  background-color: #d1d5db;
+}
+
+/* Pie de página */
 .pie-pagina {
   display: flex;
   align-items: center;
@@ -176,7 +313,7 @@ header {
 }
 
 
-.pie-pagina {
+.pie-pagina .redes-sociales {
   display: flex;           /* asegura que los iconos estén en fila */
   gap: 10px;               /* espacio entre iconos */
 }
@@ -202,6 +339,7 @@ header {
   background: #1e40af;
 }
 
+
 .redes-sociales {
   display: flex;
   gap: 12px; /* espacio entre los iconos */
@@ -218,3 +356,4 @@ header {
 .icono-red:hover {
   transform: scale(1.1);  /* efecto de zoom al pasar el ratón */
 }
+

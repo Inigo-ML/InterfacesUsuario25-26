@@ -14,15 +14,13 @@ body {
 
 /* Cabecera */
 header {
+  position: relative; /* necesario para posicionar hijos absolutos */
   display: flex;
-  align-items: center;        /* centra verticalmente todo dentro del header */
-  justify-content: space-between; /* nombre a la izq, menú centrado, logo+idioma a la dcha */
-  position: relative;
-  font-size: 16px;
-  gap: 50px;
-  border-bottom: 1px solid #292929;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 20px;
-  height: 80px;              /* <-- añade altura fija para el banner */
+  height: 80px;
+  border-bottom: 1px solid #292929;
 }
 
 .nombre {
@@ -33,13 +31,11 @@ header {
 }
 
 .cabecera {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center; /* centra las opciones */
   gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex: 1; /* ocupa el espacio central */
 }
 
 .parte-derecha {
@@ -66,147 +62,6 @@ header {
 .idioma {
   font-size: 16px;
   padding: 8px 4px;
-}
-
-/* Botón hamburguesa para menú móvil */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1001;
-}
-
-.hamburger-line {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 3px 0;
-  transition: 0.3s ease;
-  border-radius: 2px;
-}
-
-/* Menú móvil */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 320px;
-  height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease;
-  z-index: 1002;
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-menu.active {
-  right: 0;
-}
-
-.mobile-menu-header {
-  padding: 20px;
-  border-bottom: 1px solid #e5e5e5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f8f9fa;
-}
-
-.mobile-menu-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-.menu-close {
-  background: none;
-  border: none;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  position: relative;
-  padding: 0;
-}
-
-.close-line {
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background-color: #333;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-}
-
-.close-line:first-child {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.close-line:last-child {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.mobile-menu-nav {
-  flex: 1;
-  padding: 20px 0;
-}
-
-.mobile-menu-link {
-  display: block;
-  padding: 15px 20px;
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  border-bottom: 1px solid #f0f0f0;
-  transition: background-color 0.2s ease;
-}
-
-.mobile-menu-link:hover {
-  background-color: #f8f9fa;
-  color: #2563eb;
-}
-
-.mobile-menu-footer {
-  padding: 20px;
-  border-top: 1px solid #e5e5e5;
-  background: #f8f9fa;
-}
-
-.idioma-mobile {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #fff;
-}
-
-/* Overlay para el menú móvil */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1001;
-}
-
-.mobile-menu-overlay.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* Parte principal de la página */
@@ -429,6 +284,34 @@ header {
   text-decoration: none;
 }
 
+/* Flechas laterales del pack */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 32px;
+  padding: 8px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.flecha:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.flecha-izquierda {
+  left: 15px;
+}
+
+.flecha-derecha {
+  right: 15px;
+}
+
+
 /* Contenedor derecha */
 .contenedor-derecha {
   width: 33.33%;
@@ -557,7 +440,7 @@ header {
 }
 
 
-.pie-pagina .redes-sociales {
+.pie-pagina{
   display: flex;           /* asegura que los iconos estén en fila */
   gap: 10px;               /* espacio entre iconos */
 }
@@ -582,6 +465,24 @@ header {
 .pie-pagina .newsletter button:hover {
   background: #1e40af;
 }
+
+.redes-sociales {
+  display: flex;
+  gap: 12px; /* espacio entre los iconos */
+  align-items: center;
+}
+
+.icono-red {
+  width: 24px;   /* igual que el tamaño de los SVG */
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.icono-red:hover {
+  transform: scale(1.1);  /* efecto de zoom al pasar el ratón */
+}
+
 
 /* Media queries */
 @media (max-width: 768px) {
