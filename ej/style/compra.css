@@ -357,3 +357,182 @@ header {
   transform: scale(1.1);  /* efecto de zoom al pasar el ratón */
 }
 
+/* ============================= */
+/*   RESPONSIVE DESIGN           */
+/* ============================= */
+
+/* Tablets (≤ 768px) */
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .cabecera {
+    position: static;
+    transform: none;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contenedor-izquierda,
+  .contenedor-derecha {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .pack-sudeste {
+    height: 300px;
+    padding: 20px;
+  }
+
+  .pack-sudeste .boton-compra {
+    right: 20px;
+    bottom: 15px;
+    font-size: 16px;
+    padding: 6px 20px;
+  }
+
+  .descripcion-pack {
+    padding: 20px;
+  }
+
+  /* Footer */
+  .pie-pagina {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pie-pagina .copyright {
+    margin: 0; /* quitamos el margin-right:auto que lo empujaba a la izquierda */
+  }
+
+  .pie-pagina .enlaces-footer {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+
+  .pie-pagina .footer-derecha {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+
+/* Móviles (≤ 600px) */
+@media (max-width: 600px) {
+header {
+    padding: 10px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    align-items: center;     /* ✅ centra TODOS los hijos horizontalmente */
+  }
+
+  .nombre {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  /* ✅ Reseteo total de la cabecera para quitar el absolute */
+  .cabecera {
+    position: static !important;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;     /* centra horizontalmente los enlaces */
+    gap: 10px;
+    width: 100%;
+  }
+
+  /* ✅ Logo y selector perfectamente centrados */
+  .parte-derecha {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .logo {
+    height: 35px;
+    margin: 0;              /* elimina margen lateral heredado */
+  }
+
+  .contenedor-principal {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .pack-titulo h2 {
+    font-size: 20px;
+  }
+
+  .pack-titulo h4 {
+    font-size: 16px;
+  }
+
+  .pack-precio {
+    font-size: 20px;
+  }
+
+  .descripcion-pack p {
+    font-size: 14px;
+  }
+
+  .formulario-compra {
+    padding: 20px;
+  }
+
+  .btn-comprar,
+  .btn-borrar {
+    flex: 1;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .botones-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pie-pagina {
+    padding: 15px;
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .pie-pagina .enlaces-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pie-pagina .newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .pie-pagina .newsletter input[type="email"] {
+    width: 100%;
+  }
+
+  .pie-pagina .newsletter button {
+    width: 100%;
+  }
+}
