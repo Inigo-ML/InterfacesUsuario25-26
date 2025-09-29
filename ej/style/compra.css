@@ -1,198 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  height: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-}
-
-/* Cabecera */
-header {
-  position: relative; /* necesario para posicionar hijos absolutos */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  height: 80px;
-  border-bottom: 1px solid #292929;
-}
-
-.nombre {
-  position: static; /* Elimina la posición absoluta */
-  text-decoration: none;
-  color: black;
-  font-size: 18px; /* Ajusta el tamaño si es necesario */
-}
-
-.cabecera {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 20px;
-}
-
-.parte-derecha {
-  display: flex;
-  align-items: center;   /* centra verticalmente logo + selector */
-  gap: 10px;             /* espacio entre logo y selector */
-}
-.cabecera a {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: 500;
-}
-.cabecera a:hover {
-  color: #2563eb;
-}
-
-
-.logo {
-  height: 40px;
-  margin-right: 15px;
-}
-
-.idioma {
-  font-size: 16px;
-  padding: 8px 4px;
-}
-
-
 /* Parte principal */
-
-.contenedor-principal {
-  flex: 1;
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-  gap: 5px;
-}
-
 .contenedor-izquierda {
   width: 33.33%;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-left: 10px;
 }
 
 .contenedor-derecha {
   width: 66.66%;
-  padding: 20px;
-  border-left: 1px solid #292929;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.pack-sudeste {
-  height: 450px;
-  margin-top: 10px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  position: relative;
-  background-image: url("https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=3047&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-.pack-sudeste::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  pointer-events: none;
-}
-.pack-sudeste > * {
-  position: relative;
-  z-index: 2;
-}
-
-.pack-sudeste-fila {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.pack-titulo h2 {
-  font-weight: bold;
-  font-size: 24px;
-}
-.pack-titulo h4 {
-  font-size: 18px;
-  font-weight: normal;
-  margin-top: 5px;
-}
-
-.pack-precio {
-  font-weight: bold;
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.pack-sudeste .boton-compra {
-  position: absolute;
-  bottom: 20px;
-  right: 50px;
-  width: fit-content;
-  padding: 8px 32px;
-  font-size: 18px;
-  background: #2563eb;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  text-decoration: none;
-}
-.pack-sudeste .boton-compra:hover {
-  background: #1e40af;
-}
-
-.contenedor-arriba,
-.contenedor-abajo {
-  flex: 1;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.contenedor-arriba {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 8px;
-  height: 100%;
-}
-
-.contenedor-abajo h3 {
-  margin-bottom: 15px;
-  font-size: 22px;
 }
 
 .descripcion-pack {
-  background: #f9f9f9;              /* color de fondo suave */
+  background: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  height: 100%;                      /* para que ocupe el alto disponible */
+  height: 100%;
 }
 
 .descripcion-pack h3 {
@@ -213,7 +36,7 @@ header {
   background: #f9f9f9;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .formulario-compra h3 {
@@ -274,110 +97,12 @@ header {
   background-color: #d1d5db;
 }
 
-/* Pie de página */
-.pie-pagina {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centramos todo por defecto */
-  background: #333;
-  color: #fff;
-  padding: 20px 30px;
-  gap: 20px;
-  flex-wrap: wrap;
-  position: relative; /* importante para posicionar el centro */
-}
-
-.pie-pagina .copyright {
-  margin-right: auto; /* queda a la izquierda */
-}
-
-.pie-pagina .enlaces-footer a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  margin-right: 0; /* quitamos márgenes */
-}
-
-.pie-pagina .enlaces-footer {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%); /* centra exactamente */
-  display: flex;
-  gap: 20px;
-}
-
-.pie-pagina .footer-derecha {
-  display: flex;           /* activa flexbox */
-  align-items: center;     /* centra verticalmente los elementos */
-  gap: 20px;               /* espacio entre redes sociales y el formulario */
-}
-
-
-.pie-pagina .redes-sociales {
-  display: flex;           /* asegura que los iconos estén en fila */
-  gap: 10px;               /* espacio entre iconos */
-}
-
-.pie-pagina .newsletter input[type="email"] {
-  padding: 5px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: none;
-  margin-right: 5px;
-}
-
-.pie-pagina .newsletter button {
-  padding: 6px 12px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: none;
-  background: #2563eb;
-  color: #fff;
-  cursor: pointer;
-}
-.pie-pagina .newsletter button:hover {
-  background: #1e40af;
-}
-
-
-.redes-sociales {
-  display: flex;
-  gap: 12px; /* espacio entre los iconos */
-  align-items: center;
-}
-
-.icono-red {
-  width: 24px;   /* igual que el tamaño de los SVG */
-  height: 24px;
-  object-fit: contain;
-  transition: transform 0.2s ease;
-}
-
-.icono-red:hover {
-  transform: scale(1.1);  /* efecto de zoom al pasar el ratón */
-}
-
 /* ============================= */
 /*   RESPONSIVE DESIGN           */
 /* ============================= */
 
-/* Tablets (≤ 768px) */
-/* Tablets (≤ 768px) */
+/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .cabecera {
-    position: static;
-    transform: none;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
   .contenedor-principal {
     flex-direction: column;
     gap: 20px;
@@ -405,74 +130,10 @@ header {
   .descripcion-pack {
     padding: 20px;
   }
-
-  /* Footer */
-  .pie-pagina {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .pie-pagina .copyright {
-    margin: 0; /* quitamos el margin-right:auto que lo empujaba a la izquierda */
-  }
-
-  .pie-pagina .enlaces-footer {
-    position: static;
-    transform: none;
-    margin-top: 10px;
-  }
-
-  .pie-pagina .footer-derecha {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
 }
 
-
-/* Móviles (≤ 600px) */
+/* Móvil (≤ 600px) */
 @media (max-width: 600px) {
-header {
-    padding: 10px;
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-    align-items: center;     /* ✅ centra TODOS los hijos horizontalmente */
-  }
-
-  .nombre {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  /* ✅ Reseteo total de la cabecera para quitar el absolute */
-  .cabecera {
-    position: static !important;
-    transform: none !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;     /* centra horizontalmente los enlaces */
-    gap: 10px;
-    width: 100%;
-  }
-
-  /* ✅ Logo y selector perfectamente centrados */
-  .parte-derecha {
-    position: static;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .logo {
-    height: 35px;
-    margin: 0;              /* elimina margen lateral heredado */
-  }
-
   .contenedor-principal {
     flex-direction: column;
     padding: 10px;
@@ -508,31 +169,5 @@ header {
   .botones-form {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .pie-pagina {
-    padding: 15px;
-    font-size: 14px;
-    gap: 10px;
-  }
-
-  .pie-pagina .enlaces-footer {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .pie-pagina .newsletter {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .pie-pagina .newsletter input[type="email"] {
-    width: 100%;
-  }
-
-  .pie-pagina .newsletter button {
-    width: 100%;
   }
 }
