@@ -486,7 +486,11 @@ header {
   transform: scale(1.1);
 }
 
-/* Media queries */
+/* ============================= */
+/*   RESPONSIVE DESIGN           */
+/* ============================= */
+
+/* Desktop (≤ 1024px) */
 @media (max-width: 1024px) {
   header {
     padding: 0 15px;
@@ -505,6 +509,7 @@ header {
   }
 }
 
+/* Tablet (≤ 768px) */
 @media (max-width: 768px) {
   header {
     padding: 10px 15px;
@@ -545,6 +550,7 @@ header {
   }
 }
 
+/* Móvil (≤ 600px) */
 @media (max-width: 600px) {
   header {
     padding: 10px;
