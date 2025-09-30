@@ -54,8 +54,8 @@ header {
 }
 
 .logo {
-  height: 40px;
   margin-right: 15px;
+  height: 40px;
 }
 
 .idioma {
@@ -328,21 +328,17 @@ header {
   padding-bottom: 20px;
   border-bottom: 1px solid #292929;
 }
-.formulario-acceso input[type="text"],
-.formulario-acceso input[type="password"] {
+.formulario-acceso input {
   padding: 8px;
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #aaa;
   text-align: center;
 }
-
-.recordar {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.formulario-acceso input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb;
 }
-
 .formulario-acceso button,
 .formulario-acceso a {
   padding: 8px 12px;
@@ -357,6 +353,12 @@ header {
 .formulario-acceso button:hover,
 .formulario-acceso a:hover {
   background: #1e40af;
+}
+
+.recordar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .top-destinos h4,
@@ -400,30 +402,27 @@ header {
 }
 
 /* Pie de página */
-.pie-pagina {
+footer {
+  padding: 20px 30px;
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   background: #333;
   color: #fff;
-  padding: 20px 30px;
-  gap: 20px;
-  flex-wrap: wrap;
-  position: relative;
+  border-top: 1px solid black;
 }
 
-.pie-pagina .copyright {
-  margin-right: auto;
+footer .primera-fila {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.pie-pagina .enlaces-footer a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  margin-right: 0;
-}
-
-.pie-pagina .enlaces-footer {
+footer .enlaces-footer {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -433,30 +432,30 @@ header {
   justify-content: center;
 }
 
-.pie-pagina .footer-derecha {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-left: auto;
+footer .enlaces-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 0;
+}
+footer .enlaces-footer a:hover {
+  color: #2563eb;
 }
 
-.pie-pagina {
-  display: flex;
-  gap: 10px;
-}
-
-.pie-pagina .newsletter input[type="email"] {
+footer input {
   padding: 5px;
+  margin-right: 5px;
+  min-width: 150px;
   font-size: 16px;
   border-radius: 4px;
   border: none;
-  margin-right: 5px;
-  min-width: 150px;
-  flex: 1;
+}
+footer input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb;
 }
 
-.pie-pagina .newsletter button {
+footer .newsletter button {
   padding: 6px 12px;
   font-size: 16px;
   border-radius: 4px;
@@ -465,61 +464,42 @@ header {
   color: #fff;
   cursor: pointer;
 }
-.pie-pagina .newsletter button:hover {
+footer .newsletter button:hover {
   background: #1e40af;
 }
 
-.redes-sociales {
+footer .redes-sociales {
   display: flex;
-  gap: 12px;
   align-items: center;
+  gap: 12px;
 }
 
-.icono-red {
+footer .redes-sociales img {
   width: 24px;
   height: 24px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
 
-.icono-red:hover {
+footer .redes-sociales img:hover {
   transform: scale(1.1);
 }
 
-/* ============================= */
-/*   RESPONSIVE DESIGN           */
-/* ============================= */
+/* ==================================== */
+/* MEDIA QUERIES PARA DISEÑO RESPONSIVE */
+/* ==================================== */
 
-/* Desktop (≤ 1024px) */
-@media (max-width: 1024px) {
+/* Móvil (≤ 600px) */
+@media (max-width: 600px) {
   header {
-    padding: 0 15px;
-  }
-
-  .cabecera {
-    gap: 15px;
-  }
-
-  .pie-pagina {
-    padding: 20px 15px;
-  }
-
-  .pie-pagina .enlaces-footer {
-    gap: 15px;
-  }
-}
-
-/* Tablet (≤ 768px) */
-@media (max-width: 768px) {
-  header {
-    padding: 10px 15px;
+    padding: 10px;
     flex-wrap: wrap;
     height: auto;
     min-height: 60px;
   }
 
   .nombre {
-    font-size: 16px;
+    font-size: 14px;
     order: 1;
   }
 
@@ -530,8 +510,12 @@ header {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .cabecera a {
+    font-size: 12px;
   }
 
   .parte-derecha {
@@ -540,50 +524,17 @@ header {
   }
 
   .logo {
-    height: 35px;
-    margin-right: 10px;
+    height: 25px;
+    margin-right: 6px;
   }
 
   .idioma {
-    font-size: 14px;
-    padding: 6px 8px;
-  }
-}
-
-/* Móvil (≤ 600px) */
-@media (max-width: 600px) {
-  header {
-    padding: 10px;
-  }
-
-  .nombre {
-    font-size: 14px;
-  }
-
-  .cabecera {
-    gap: 10px;
-    margin-top: 8px;
-  }
-
-  .cabecera a {
-    font-size: 14px;
-  }
-
-  .logo {
-    height: 30px;
-    margin-right: 8px;
-  }
-
-  .idioma {
-    font-size: 12px;
-    padding: 4px 6px;
+    font-size: 11px;
+    padding: 3px 5px;
   }
 
   .contenedor-principal {
     flex-direction: column;
-  }
-  .contenedor-arriba {
-    padding: 0;
   }
   .contenedor-izquierda {
     margin: 0;
@@ -599,11 +550,9 @@ header {
   }
   .pack-sudeste {
     height: 300px;
-    margin: 20px;
   }
   .galeria-experiencias {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
   }
   .contenedor-derecha {
     border-left: none;
@@ -611,19 +560,19 @@ header {
     margin-top: 20px;
   }
 
-  .pie-pagina {
+  footer {
     flex-direction: column;
     text-align: center;
     gap: 15px;
     padding: 15px;
   }
 
-  .pie-pagina .copyright {
+  footer .copyright {
     margin-right: 0;
     order: 3;
   }
 
-  .pie-pagina .enlaces-footer {
+  footer .enlaces-footer {
     position: static;
     transform: none;
     order: 1;
@@ -632,14 +581,7 @@ header {
     gap: 15px;
   }
 
-  .pie-pagina .footer-derecha {
-    flex-direction: column;
-    margin-left: 0;
-    gap: 15px;
-    order: 2;
-  }
-
-  .pie-pagina .newsletter {
+  footer .newsletter {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -647,12 +589,128 @@ header {
     max-width: 300px;
   }
 
-  .pie-pagina .newsletter input[type="email"] {
+  footer input {
     margin-right: 0;
-    width: 100%;
+  }
+}
+
+/* Tablet (601px - 768px) */
+@media (601px <= width <= 768px) {
+  header {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 65px;
   }
 
-  .pie-pagina .newsletter button {
+  .nombre {
+    font-size: 15px;
+    order: 1;
+  }
+
+  .cabecera {
+    position: static;
+    transform: none;
+    order: 3;
     width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .cabecera a {
+    font-size: 14px;
+  }
+
+  .parte-derecha {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .logo {
+    height: 32px;
+    margin-right: 8px;
+  }
+
+  .idioma {
+    font-size: 13px;
+    padding: 5px 7px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  footer .primera-fila {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer .enlaces-footer {
+    position: static;
+    transform: none;
+    order: 1;
+  }
+
+  footer .copyright {
+    order: 3;
+  }
+
+  footer .redes-sociales {
+    order: 2;
+  }
+
+  footer .newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+/* Desktop pequeño (769px - 1024px) */
+@media (769px <= width <= 1024px) {
+  header {
+    padding: 0 15px;
+    height: 70px;
+  }
+
+  .nombre {
+    font-size: 17px;
+  }
+
+  .cabecera {
+    gap: 15px;
+  }
+
+  .cabecera a {
+    font-size: 15px;
+  }
+
+  .logo {
+    height: 38px;
+    margin-right: 12px;
+  }
+
+  .idioma {
+    font-size: 15px;
+    padding: 7px 6px;
+  }
+
+  footer {
+    padding: 20px 15px;
+  }
+
+  footer .enlaces-footer {
+    gap: 15px;
+  }
+
+  .galeria-experiencias {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
 }
