@@ -106,6 +106,11 @@
   border-radius: 4px;
   resize: vertical;
 }
+.formulario-consejos input:focus,
+.formulario-consejos textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+}
 .formulario-consejos button {
   align-self: flex-start;
   background-color: #2563eb;
@@ -115,6 +120,9 @@
   border-radius: 4px;
   cursor: pointer;
   padding: 8px 16px;
+}
+.formulario-consejos button:hover {
+  background-color: #1e40af;
 }
 
 .calendario {
