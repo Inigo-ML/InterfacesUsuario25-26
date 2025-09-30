@@ -638,6 +638,26 @@ footer .redes-sociales img:hover {
     padding: 5px 7px;
   }
 
+  .formulario-acceso div {
+    gap: 2.5px;
+    display: flex;
+  }
+
+  .tarjeta-titulo {
+    font-size: 1.1rem;
+  }
+
+  .formulario-acceso div button {
+    flex: 1;          
+    text-align: center;
+  }
+
+  .pack-sudeste .boton-compra {
+    left: 50%;
+    right: auto;             /* anulamos el right */
+    transform: translateX(-50%); /* centramos horizontalmente */
+  }
+  
   footer {
     flex-direction: column;
     text-align: center;
