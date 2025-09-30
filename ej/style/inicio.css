@@ -401,6 +401,21 @@ header {
   margin: 10px 0px;
 }
 
+.boton-registro {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.boton-registro:hover {
+  background: #1e40af;
+}
+
 /* Pie de página */
 footer {
   padding: 20px 30px;
@@ -639,8 +654,14 @@ footer .redes-sociales img:hover {
   }
 
   .formulario-acceso div {
-    gap: 2.5px;
     display: flex;
+    gap: 10px;              
+  }
+  
+  .formulario-acceso .boton-registro {
+    flex: 1;               
+    text-align: center;     
+    padding: 10px;          
   }
 
   .tarjeta-titulo {
@@ -654,8 +675,8 @@ footer .redes-sociales img:hover {
 
   .pack-sudeste .boton-compra {
     left: 50%;
-    right: auto;             /* anulamos el right */
-    transform: translateX(-50%); /* centramos horizontalmente */
+    right: auto;             
+    transform: translateX(-50%); 
   }
   
   footer {
@@ -690,7 +711,13 @@ footer .redes-sociales img:hover {
     gap: 10px;
     justify-content: center;
   }
+
+  .grid-experiencias {
+    font-size: 14px;
+  }
 }
+
+
 
 /* Desktop pequeño (769px - 1024px) */
 @media (769px <= width <= 1024px) {
