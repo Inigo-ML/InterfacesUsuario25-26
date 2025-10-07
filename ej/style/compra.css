@@ -97,6 +97,11 @@
   background-color: #d1d5db;
 }
 
+/* Mostrar solo la vista activa en compra */
+#compra-packs .vista-pack { display: none; }
+#compra-packs .vista-pack.activa { display: block; }
+
+
 /* ============================= */
 /*   RESPONSIVE DESIGN           */
 /* ============================= */

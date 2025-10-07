@@ -32,34 +32,87 @@
     </header>
     <div class="contenedor-principal">
       <div class="contenedor-izquierda">
-        <div class="contenedor-arriba">
-          <div class="pack-sudeste">
-            <div class="pack-titulo">
-              <div class="pack-sudeste-fila">
-                <h2>Pack Sudeste Asiático</h2>
-                <span class="pack-precio">600€</span>
+        <div id="compra-packs">
+      
+          <!-- VISTA: Sudeste (activa por defecto) -->
+          <section class="vista-pack activa" data-pack="sudeste" aria-hidden="false">
+            <div class="contenedor-arriba">
+              <div class="pack-sudeste" style="background-image:url('https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=3047&auto=format&fit=crop');">
+                <div class="pack-titulo">
+                  <div class="pack-sudeste-fila">
+                    <h2>Pack Sudeste Asiático</h2>
+                    <span class="pack-precio">600€</span>
+                  </div>
+                  <h4>Descubre la magia de Vietnam: cultura, naturaleza y aventura.</h4>
+                </div>
+                <a href="/compra.html" class="boton-compra">Comprar</a>
               </div>
-              <h4>
-                Descubre la magi de Vietnam: cultura, naturaleza y aventura.
-              </h4>
             </div>
-            <a href="/compra.html" class="boton-compra">Comprar</a>
-          </div>
-        </div>
-        <div class="contenedor-abajo">
-          <div class="descripcion-pack">
-            <h3>Descripción del pack</h3>
-            <p>
-              Este pack incluye un recorrido de 15 días por Vietnam, Tailandia y
-              Camboya, con alojamientos seleccionados, transporte entre
-              ciudades, actividades culturales y excursiones a los principales
-              templos, mercados y paisajes naturales. Ideal para mochileros que
-              buscan aventura, gastronomía local y contacto directo con la
-              cultura del Sudeste Asiático.
-            </p>
-          </div>
+            <div class="contenedor-abajo">
+              <div class="descripcion-pack">
+                <h3>Descripción del pack</h3>
+                <p>
+                  Recorrido de 15 días por Vietnam, Tailandia y Camboya, con alojamientos
+                  seleccionados, transporte entre ciudades y actividades culturales.
+                  Ideal para mochileros que buscan aventura y gastronomía local.
+                </p>
+              </div>
+            </div>
+          </section>
+      
+          <!-- VISTA: Sri Lanka -->
+          <section class="vista-pack" data-pack="sri-lanka" aria-hidden="true">
+            <div class="contenedor-arriba">
+              <div class="pack-sudeste" style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80');">
+                <div class="pack-titulo">
+                  <div class="pack-sudeste-fila">
+                    <h2>Pack Sri Lanka Esencial</h2>
+                    <span class="pack-precio">580€</span>
+                  </div>
+                  <h4>Playas doradas, té en las Tierras Altas y templos milenarios.</h4>
+                </div>
+                <a href="/compra.html" class="boton-compra">Comprar</a>
+              </div>
+            </div>
+            <div class="contenedor-abajo">
+              <div class="descripcion-pack">
+                <h3>Descripción del pack</h3>
+                <p>
+                  Ruta de 12 días por la costa sur, plantaciones de té en Nuwara Eliya,
+                  Sigiriya y Kandy. Incluye traslados, guesthouses y actividades culturales.
+                </p>
+              </div>
+            </div>
+          </section>
+      
+          <!-- VISTA: Nepal -->
+          <section class="vista-pack" data-pack="nepal" aria-hidden="true">
+            <div class="contenedor-arriba">
+              <div class="pack-sudeste" style="background-image:url('https://images.unsplash.com/photo-1522069213448-443a614da9b0?auto=format&fit=crop&w=1600&q=80');">
+                <div class="pack-titulo">
+                  <div class="pack-sudeste-fila">
+                    <h2>Pack Nepal Trek & Cultura</h2>
+                    <span class="pack-precio">640€</span>
+                  </div>
+                  <h4>Trekking suave en el valle de Katmandú y monasterios budistas.</h4>
+                </div>
+                <a href="/compra.html" class="boton-compra">Comprar</a>
+              </div>
+            </div>
+            <div class="contenedor-abajo">
+              <div class="descripcion-pack">
+                <h3>Descripción del pack</h3>
+                <p>
+                  Programa de 10 días con caminatas accesibles cerca de Katmandú, visita a
+                  Bhaktapur y Patan, y experiencias en monasterios. Incluye guías locales.
+                </p>
+              </div>
+            </div>
+          </section>
+      
         </div>
       </div>
+      
       <div class="contenedor-derecha">
         <div class="formulario-compra">
           <form>
@@ -127,5 +180,6 @@
         <button type="submit">Suscribirse</button>
       </form>
     </footer>
+    <script src="js/compra.js" defer></script>
   </body>
 </html>

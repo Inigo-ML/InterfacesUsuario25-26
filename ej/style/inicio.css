@@ -416,6 +416,23 @@ header {
   background: #1e40af;
 }
 
+/* Transición suave del carrusel */
+#pack-carrusel {
+  transition: background-image 0.3s ease, opacity 0.25s ease;
+}
+#pack-carrusel.cambiando {
+  opacity: 0.2;
+}
+
+/* Carrusel por visibilidad */
+#packs-carousel { position: relative; }     /* Para posicionar las flechas dentro del carrusel */
+#packs-carousel .slide { display: none; }   /* Ocultamos por defecto */
+#packs-carousel .slide.activa { display: flex; }  /* Muestra solo la activa */
+
+/* (Opcional) evita flash blanco si cambia el fondo en algún momento */
+#packs-carousel .slide { background-color: #000; }
+
+
 /* Pie de página */
 footer {
   padding: 20px 30px;

@@ -38,20 +38,51 @@
               <h1>Comparte y descubre viajes mochileros de larga distancia</h1>
             </div>
           </div>
-          <div class="pack-sudeste">
-            <div class="pack-titulo">
-              <div class="pack-sudeste-fila">
-                <h2>Pack Sudeste Asiático</h2>
-                <span class="pack-precio">600€</span>
+          <!-- CARRUSEL DE PACKS -->
+          <section id="packs-carousel" aria-live="polite">
+            <!-- Slide 1 (activa por defecto) -->
+            <div class="pack-sudeste slide activa" data-pack="sudeste" aria-hidden="false">
+              <div class="pack-titulo">
+                <div class="pack-sudeste-fila">
+                  <h2>Pack Sudeste Asiático</h2>
+                  <span class="pack-precio">600€</span>
+                </div>
+                <h4>Descubre la magia de Vietnam: cultura, naturaleza y aventura.</h4>
               </div>
-              <h4>
-                Descubre la magia de Vietnam: cultura, naturaleza y aventura.
-              </h4>
+              <a href="compra.html?pack=sudeste" class="boton-compra">Comprar</a>
             </div>
-            <a href="compra.html" class="boton-compra">Comprar</a>
-            <button class="flecha flecha-izquierda">&#10094;</button>
-            <button class="flecha flecha-derecha">&#10095;</button>
-          </div>
+          
+            <!-- Slide 2 -->
+            <div class="pack-sudeste slide" data-pack="sri-lanka" aria-hidden="true"
+                style="background-image:url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1600&q=80')">
+              <div class="pack-titulo">
+                <div class="pack-sudeste-fila">
+                  <h2>Pack Sri Lanka Esencial</h2>
+                  <span class="pack-precio">580€</span>
+                </div>
+                <h4>Playas doradas, té en las Tierras Altas y templos milenarios.</h4>
+              </div>
+              <a href="compra.html?pack=sri-lanka" class="boton-compra">Comprar</a>
+            </div>
+          
+            <!-- Slide 3 -->
+            <div class="pack-sudeste slide" data-pack="nepal" aria-hidden="true"
+                style="background-image:url('https://images.unsplash.com/photo-1522069213448-443a614da9b0?auto=format&fit=crop&w=1600&q=80')">
+              <div class="pack-titulo">
+                <div class="pack-sudeste-fila">
+                  <h2>Pack Nepal Trek & Cultura</h2>
+                  <span class="pack-precio">640€</span>
+                </div>
+                <h4>Trekking suave en el valle de Katmandú y monasterios budistas.</h4>
+              </div>
+              <a href="compra.html?pack=nepal" class="boton-compra">Comprar</a>
+            </div>
+          
+            <button class="flecha flecha-izquierda" id="pack-prev" aria-label="Ver pack anterior" title="Anterior">&#10094;</button>
+            <button class="flecha flecha-derecha" id="pack-next" aria-label="Ver pack siguiente" title="Siguiente">&#10095;</button>
+          </section>
+          
+
         </div>
         <div class="contenedor-abajo">
           <h3>Experiencias de la comunidad mochilera</h3>
@@ -237,5 +268,6 @@
         <button type="submit">Suscribirse</button>
       </form>
     </footer>
+    <script src="js/carrusel.js" defer></script>
   </body>
 </html>
