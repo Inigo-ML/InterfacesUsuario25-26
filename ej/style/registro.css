@@ -116,7 +116,7 @@ header {
 .formulario-registro input[type="checkbox"] {
   width: fit-content;
 }
-.formulario-registro .checkbox-privacidad {
+.formulario-registro .contenedor-privacidad {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -132,11 +132,15 @@ header {
 .formulario-registro button:hover {
   background-color: #1e40af;
 }
+.formulario-registro button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
 
 .boton-acceder {
-  display: inline-flex;          
-  justify-content: center;       
-  align-items: center;           
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px 16px;
   font-size: 16px;
   border-radius: 4px;
@@ -145,12 +149,11 @@ header {
   color: #fff;
   cursor: pointer;
   text-decoration: none;
-  text-align: center;            
+  text-align: center;
 }
 .boton-acceder:hover {
   background: #1e40af;
 }
-
 
 /* pie de pagina */
 .pie-pagina {

@@ -127,7 +127,7 @@ header {
   flex-direction: column;
   flex: 1 1 auto;
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1504457047772-27faf1c00561?q=80&w=3047&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-image: url("/images/carrusel/tailandia.webp");
   background-size: cover;
   background-position: center;
   color: white;
@@ -425,13 +425,20 @@ header {
 }
 
 /* Carrusel por visibilidad */
-#packs-carousel { position: relative; }     /* Para posicionar las flechas dentro del carrusel */
-#packs-carousel .slide { display: none; }   /* Ocultamos por defecto */
-#packs-carousel .slide.activa { display: flex; }  /* Muestra solo la activa */
+#packs-carousel {
+  position: relative;
+} /* Para posicionar las flechas dentro del carrusel */
+#packs-carousel .slide {
+  display: none;
+} /* Ocultamos por defecto */
+#packs-carousel .slide.activa {
+  display: flex;
+} /* Muestra solo la activa */
 
 /* (Opcional) evita flash blanco si cambia el fondo en algún momento */
-#packs-carousel .slide { background-color: #000; }
-
+#packs-carousel .slide {
+  background-color: #000;
+}
 
 /* Pie de página */
 footer {
@@ -672,13 +679,13 @@ footer .redes-sociales img:hover {
 
   .formulario-acceso div {
     display: flex;
-    gap: 10px;              
+    gap: 10px;
   }
-  
+
   .formulario-acceso .boton-registro {
-    flex: 1;               
-    text-align: center;     
-    padding: 10px;          
+    flex: 1;
+    text-align: center;
+    padding: 10px;
   }
 
   .tarjeta-titulo {
@@ -686,16 +693,16 @@ footer .redes-sociales img:hover {
   }
 
   .formulario-acceso div button {
-    flex: 1;          
+    flex: 1;
     text-align: center;
   }
 
   .pack-sudeste .boton-compra {
     left: 50%;
-    right: auto;             
-    transform: translateX(-50%); 
+    right: auto;
+    transform: translateX(-50%);
   }
-  
+
   footer {
     flex-direction: column;
     text-align: center;
@@ -733,8 +740,6 @@ footer .redes-sociales img:hover {
     font-size: 14px;
   }
 }
-
-
 
 /* Desktop pequeño (769px - 1024px) */
 @media (769px <= width <= 1024px) {

@@ -102,20 +102,6 @@
 #compra-packs .vista-pack.activa { display: block; }
 
 
-/* Estados de error y mensajes (validación) */
-.campo-invalido {
-  border-color: #dc2626 !important;
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
-}
-
-.msg-error {
-  margin-top: 4px;
-  color: #b91c1c;
-  font-size: 14px;
-}
-
-
 /* ============================= */
 /*   RESPONSIVE DESIGN           */
 /* ============================= */
