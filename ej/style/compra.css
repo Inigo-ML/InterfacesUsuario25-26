@@ -97,6 +97,21 @@
   background-color: #d1d5db;
 }
 
+
+/* Estados de error y mensajes (validación) */
+.campo-invalido {
+  border-color: #dc2626 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.msg-error {
+  margin-top: 4px;
+  color: #b91c1c;
+  font-size: 14px;
+}
+
+
 /* Mostrar solo la vista activa en compra */
 #compra-packs .vista-pack { display: none; }
 #compra-packs .vista-pack.activa { display: block; }

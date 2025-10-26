@@ -47,6 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (imgLS) img.src = imgLS;
     img.alt = `Foto de perfil de ${datos.nombre || "usuario"}`;
   }
+  // Nombre a guardar como autor de los consejos
+  const AUTOR_ACTUAL = (`${datos.nombre || ""} ${datos.apellidos || ""}`.trim()) || "Usuario";
+
 
   // Logout
   // Logout
@@ -70,5 +73,119 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "inicio.html";
     });
  }
+
+   // -----------------------------
+  // NUEVO: Lógica "Últimos consejos"
+  // -----------------------------
+  const STORAGE_KEY_CONSEJOS = "consejosMSF";
+  const listaConsejosEl = document.getElementById("lista-consejos");
+  const formConsejos = document.getElementById("form-consejos");
+  const inputTitulo = document.getElementById("titulo-consejo");
+  const inputDescripcion = document.getElementById("descripcion-consejo");
+
+  function cargarConsejos() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY_CONSEJOS)) || [];
+    } catch {
+      return [];
+    }
+  }
+
+  function guardarConsejos(arr) {
+    localStorage.setItem(STORAGE_KEY_CONSEJOS, JSON.stringify(arr));
+  }
+
+  function renderConsejos() {
+    const consejos = cargarConsejos()
+      .sort((a, b) => b.createdAt - a.createdAt) // más recientes primero
+      .slice(0, 3);
+
+    listaConsejosEl.innerHTML = "";
+
+    if (consejos.length === 0) {
+      // (Opcional) texto vacío si no hay consejos aún
+      const li = document.createElement("li");
+      li.textContent = "Aún no hay consejos. ¡Sé el primero en compartir uno!";
+      listaConsejosEl.appendChild(li);
+      return;
+    }
+
+    for (const c of consejos) {
+      const li = document.createElement("li");
+
+      // enlace al consejo
+      const a = document.createElement("a");
+      a.href = `consejo.html?id=${encodeURIComponent(c.id)}`;
+      a.textContent = c.titulo;
+      a.className = "consejo-link";
+      li.appendChild(a);
+
+      // ← NUEVO: mostrar " por {autor}"
+      const spanAutor = document.createElement("span");
+      spanAutor.className = "autor-consejo";
+      spanAutor.textContent = ` por ${c.autor || "Usuario"}`;
+      li.appendChild(spanAutor);
+
+      listaConsejosEl.appendChild(li);
+    }
+
+  }
+
+  // Pintar al cargar
+  renderConsejos();
+
+  // Validación + alta de consejos
+  formConsejos.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const titulo = (inputTitulo.value || "").trim();
+    const descripcion = (inputDescripcion.value || "").trim();
+
+    // Reset de mensajes nativos para evitar arrastre
+    inputTitulo.setCustomValidity("");
+    inputDescripcion.setCustomValidity("");
+
+    let valido = true;
+
+    if (titulo.length < 15) {
+      inputTitulo.setCustomValidity("El título debe tener al menos 15 caracteres.");
+      valido = false;
+    }
+    if (descripcion.length < 30) {
+      inputDescripcion.setCustomValidity("La descripción debe tener al menos 30 caracteres.");
+      valido = false;
+    }
+
+    // Si algo falla, mostramos los mensajes nativos del navegador
+    if (!valido) {
+      // Fuerza a que el navegador muestre los mensajes en los campos con error
+      inputTitulo.reportValidity();
+      inputDescripcion.reportValidity();
+      return;
+    }
+
+    // Crear el objeto consejo
+    // Crear el objeto consejo (ahora con autor)
+    const nuevo = {
+      id: crypto.randomUUID ? crypto.randomUUID() : (Date.now() + "-" + Math.random().toString(16).slice(2)),
+      titulo,
+      descripcion,
+      createdAt: Date.now(),
+      autor: AUTOR_ACTUAL
+    };
+
+
+    const lista = cargarConsejos();
+    // Añadir al comienzo (más reciente primero)
+    lista.unshift(nuevo);
+    guardarConsejos(lista);
+
+    // Actualizar UI
+    renderConsejos();
+
+    // Limpiar formulario
+    formConsejos.reset();
+  });
+
 
 });

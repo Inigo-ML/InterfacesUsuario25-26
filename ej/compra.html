@@ -115,14 +115,14 @@
       
       <div class="contenedor-derecha">
         <div class="formulario-compra">
-          <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required >
+          <form id="form-compra" novalidate>
+            <label for="nombre">Nombre completo*</label>
+            <input type="text" id="nombre" name="nombre" minlength="3" required autocomplete="name">
 
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required >
+            <label for="correo">Correo electrónico*</label>
+            <input type="email" id="correo" name="correo" required autocomplete="email" inputmode="email">
 
-            <label for="tipo-tarjeta">Tipo de tarjeta:</label>
+            <label for="tipo-tarjeta">Tipo de tarjeta*</label>
             <select id="tipo-tarjeta" name="tipo-tarjeta" required>
               <option value="">Seleccione una opción</option>
               <option value="visa">Visa</option>
@@ -130,28 +130,45 @@
               <option value="amex">American Express</option>
             </select>
 
-            <label for="numero-tarjeta">Número de tarjeta:</label>
+            <label for="numero-tarjeta">Número de tarjeta* (13, 15, 16 o 19 dígitos)</label>
             <input
               type="text"
               id="numero-tarjeta"
               name="numero-tarjeta"
               required
+              inputmode="numeric"
+              autocomplete="cc-number"
+              pattern="^(?:\d{13}|\d{15}|\d{16}|\d{19})$"
+              placeholder="Solo dígitos, sin espacios"
             >
 
-            <label for="titular">Nombre del titular:</label>
-            <input type="text" id="titular" name="titular" required >
+            <label for="titular">Nombre del titular de la tarjeta*</label>
+            <input type="text" id="titular" name="titular" minlength="3" required autocomplete="cc-name">
 
-            <label for="caducidad">Fecha de caducidad:</label>
-            <input type="month" id="caducidad" name="caducidad" required >
+            <label for="caducidad">Fecha de caducidad*</label>
+            <input type="month" id="caducidad" name="caducidad" required autocomplete="cc-exp">
 
-            <label for="cvv">Código de seguridad (CVV):</label>
-            <input type="number" id="cvv" name="cvv" max="9999" required >
+            <label for="cvv">CVV* (3 dígitos)</label>
+            <input
+              type="text"
+              id="cvv"
+              name="cvv"
+              required
+              inputmode="numeric"
+              autocomplete="cc-csc"
+              maxlength="3"
+              pattern="^\d{3}$"
+              placeholder="XXX"
+            >
+
+            <p id="form-error" class="msg-error" role="alert" hidden></p>
 
             <div class="botones-form">
               <button type="submit" class="btn-comprar">Comprar</button>
               <button type="reset" class="btn-borrar">Borrar</button>
             </div>
           </form>
+
         </div>
       </div>
     </div>
@@ -181,5 +198,6 @@
       </form>
     </footer>
     <script src="js/compra.js" defer></script>
+    <script src="js/checkout-validate.js" defer></script>
   </body>
 </html>

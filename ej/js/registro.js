@@ -12,6 +12,44 @@ const inputEmail = document.getElementById("email");
 const inputConfirmarEmail = document.getElementById("confirmar-email");
 const inputImagenPerfil = document.getElementById("imagen-perfil");
 
+const USERS_KEY = "usuariosMSF";
+
+function cargarUsuarios() {
+  try { return JSON.parse(localStorage.getItem(USERS_KEY)) || []; }
+  catch { return []; }
+}
+
+function guardarUsuarios(arr) {
+  localStorage.setItem(USERS_KEY, JSON.stringify(arr));
+}
+
+function detectarConflictos(nuevo) {
+  const flags = { nombre: false, apellidos: false, email: false };
+  const lista = cargarUsuarios();
+
+  const check = (u) => {
+    if (!u) return;
+    const nn = (u.nombre || "").trim().toLowerCase();
+    const na = (u.apellidos || "").trim().toLowerCase();
+    const ne = (u.email || "").trim().toLowerCase();
+    const cn = nuevo.nombre.trim().toLowerCase();
+    const ca = nuevo.apellidos.trim().toLowerCase();
+    const ce = nuevo.email.trim().toLowerCase();
+
+    if (nn && nn === cn) flags.nombre = true;
+    if (na && na === ca) flags.apellidos = true;
+    if (ne && ne === ce) flags.email = true;
+  };
+
+  for (const u of lista) check(u); 
+  try { check(JSON.parse(localStorage.getItem("usuarioDatos"))); } catch {} 
+
+  return flags;
+}
+
+
+
+
 // Función para validar el nombre
 function validarNombre() {
   const nombre = inputNombre.value.trim();
@@ -194,6 +232,7 @@ inputEmail.addEventListener("input", () => {
 });
 inputConfirmarEmail.addEventListener("input", validarConfirmarEmail);
 
+
 // Función para guardar datos en cookie
 function guardarDatosEnCookie() {
   // Leer el archivo de imagen y convertirlo a Base64
@@ -225,6 +264,18 @@ function guardarDatosEnCookie() {
       const fechaExpiracion = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toUTCString();
       document.cookie = `usuarioRegistrado=${datosEncoded}; expires=${fechaExpiracion}; path=/; SameSite=Lax`;
     }
+
+    // --- NUEVO: añadir a la lista global de usuarios (para chequeos futuros) ---
+    const lista = cargarUsuarios();
+    lista.push({
+      nombre: datosUsuario.nombre,
+      apellidos: datosUsuario.apellidos,
+      email: datosUsuario.email,
+      fechaNacimiento: datosUsuario.fechaNacimiento,
+      createdAt: Date.now()
+    });
+    guardarUsuarios(lista);
+
 
     // 3) Imagen y credenciales a localStorage
     localStorage.setItem("usuarioImagen", e.target.result);                // dataURL
@@ -273,25 +324,50 @@ formulario.addEventListener("submit", (event) => {
 
   // Si todas las validaciones son correctas
   if (
-    nombreValido &&
-    apellidosValidos &&
-    fechaValida &&
-    passwordValida &&
-    repetirPasswordValida &&
-    emailValido &&
-    confirmarEmailValido &&
-    checkboxPrivacidad.checked
-  ) {
-    // Verificar que se haya seleccionado una imagen
-    if (!inputImagenPerfil.files || !inputImagenPerfil.files[0]) {
-      alert("Por favor, selecciona una imagen de perfil");
-      inputImagenPerfil.focus();
-      return;
-    }
+  nombreValido &&
+  apellidosValidos &&
+  fechaValida &&
+  passwordValida &&
+  repetirPasswordValida &&
+  emailValido &&
+  confirmarEmailValido &&
+  checkboxPrivacidad.checked
+) {
+  // --- detección de duplicados (nombre, apellidos o email) ---
+  const candidato = {
+    nombre: inputNombre.value.trim(),
+    apellidos: inputApellidos.value.trim(),
+    email: inputEmail.value.trim()
+  };
 
-    // Guardar datos en cookie (incluye la redirección dentro de la función)
-    guardarDatosEnCookie();
-  } else {
+  const conf = detectarConflictos(candidato);
+  if (conf.nombre || conf.apellidos || conf.email) {
+    const parts = [];
+    if (conf.nombre) parts.push("nombre");
+    if (conf.apellidos) parts.push("apellidos");
+    if (conf.email) parts.push("correo electrónico");
+
+    alert(`Ya existe un usuario con el mismo ${parts.join(" y ")}. Por favor, modifica los datos e inténtalo de nuevo.`);
+
+    // (opcional) enfocar el primer campo en conflicto
+    if (conf.nombre) inputNombre.focus();
+    else if (conf.apellidos) inputApellidos.focus();
+    else if (conf.email) inputEmail.focus();
+    return; // bloquea el registro
+  }
+
+  // Verificar que se haya seleccionado una imagen
+  if (!inputImagenPerfil.files || !inputImagenPerfil.files[0]) {
+    alert("Por favor, selecciona una imagen de perfil");
+    inputImagenPerfil.focus();
+    return;
+  }
+
+  // Guardar datos en cookie (incluye la redirección dentro de la función)
+  guardarDatosEnCookie();
+}
+
+  else {
     // Mostrar los mensajes de error
     formulario.reportValidity();
   }

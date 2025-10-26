@@ -203,25 +203,13 @@
           </div>
         </div>
         <div class="ultimos-consejos">
-          <h4>Últimos consejos</h4>
-          <ul>
-            <li>
-              <a href="#">Cómo ahorrar dinero en hoteles</a>
-            </li>
-            <li>
-              <a href="#">Mejores apps para organizar viajes</a>
-            </li>
-            <li>
-              <a href="#">Cómo evitar caer en trampas turísticas</a>
-            </li>
-            <li>
-              <a href="#">Cómo elegir los mejores restaurantes</a>
-            </li>
-          </ul>
+          <h4>Últimos consejos (título)</h4>
+          <ul id="lista-consejos"></ul>
+
           <h5>¿Tienes algún consejo?</h5>
-          <form class="formulario-consejos">
-            <input type="text" placeholder="Título del consejo" required >
-            <textarea placeholder="Escribe aquí tu consejo" required></textarea>
+          <form id="form-consejos" class="formulario-consejos" novalidate>
+            <input id="titulo-consejo" type="text" placeholder="Título del consejo (mín. 15)" required>
+            <textarea id="descripcion-consejo" placeholder="Escribe aquí tu consejo (mín. 30)" required></textarea>
             <button type="submit">Enviar</button>
           </form>
         </div>

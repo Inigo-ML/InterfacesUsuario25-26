@@ -210,3 +210,16 @@
 .dia.otro-mes:hover {
   background: #f3f4f6;
 }
+
+.ultimos-consejos #lista-consejos a.consejo-link {
+  font-style: italic;            
+  text-decoration: underline;    
+  text-underline-offset: 2px;    
+  cursor: pointer;
+}
+
+.ultimos-consejos #lista-consejos a.consejo-link:hover,
+.ultimos-consejos #lista-consejos a.consejo-link:focus {
+  text-decoration-thickness: 2px; 
+  outline: none;
+}
